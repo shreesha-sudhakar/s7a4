@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<div id="a" onmouseover="func(event);" style="width:1000px height:1000px">hover on mee!!!!</div><br>
+<p id="index"></p>
+<script type="text/javascript">
+	function func(event)
+	{
+	var x = event.clientX;
+    var y = event.clientY;
+    var timee=new Date();
+    var mon=timee.getMonth();
+    var year=timee.getFullYear();
+    var num=timee.getDate();
+    var day=timee.getDay();
+    var hours=timee.getHours();
+    var mins=timee.getMinutes();
+    var secs=timee.getSeconds();
+    var datee=timee.getTime();
+    var coords = "X coords: " + x + ", Y coords: " + y+"  date:"+num+"/"+mon+"/"+year+"  hours:mins:secs  "+hours+":"+mins+":"+secs+"  (INDIA STANDARD TIME)";
+    //document.write(coords);
+    document.getElementById("index").innerHTML = coords;
+	}
+</script>
+
+</body>
+</html>
